@@ -1,0 +1,315 @@
+
+<?php
+$name = "Lord Eiryll Tampoc";
+$course = "Information Technology";
+$role = "IT Student | Aspiring Web Developer";
+
+$skills = [
+    "HTML & CSS",
+    "JavaScript",
+    "PHP",
+    "MySQL",
+    "React JS",
+    "Java",
+    "Python",
+    "Computer Troubleshooting"
+];
+
+$projects = [
+    [
+        "title" => "LabTrack System",
+        "description" => "An RFID-based computer laboratory tracking system designed to monitor student authentication and computer usage."
+    ],
+    [
+        "title" => "Student Management System",
+        "description" => "A system designed to organize and manage student information efficiently."
+    ],
+    [
+        "title" => "Personal Portfolio",
+        "description" => "A responsive personal website showcasing my skills, education, and projects."
+    ]
+];
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo htmlspecialchars($name); ?> | CV</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #1d4ed8);
+            color: white;
+            text-align: center;
+            padding: 65px 20px;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            background: #ffffff;
+            color: #1d4ed8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            border: 4px solid #93c5fd;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: #dbeafe;
+            font-size: 17px;
+        }
+
+        nav {
+            background: #ffffff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #1e293b;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #1d4ed8;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #dbeafe;
+        }
+
+        .info p {
+            margin-bottom: 8px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 9px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .project {
+            padding: 18px;
+            border-left: 4px solid #2563eb;
+            background: #f8fafc;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .project h3 {
+            color: #1e40af;
+            margin-bottom: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-top: 15px;
+            font-size: 15px;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 27px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+                font-size: 13px;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+
+        @media print {
+            nav, .btn {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+
+            .container {
+                margin: 15px auto;
+            }
+
+            section {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="avatar">LET</div>
+    <h1><?php echo htmlspecialchars($name); ?></h1>
+    <p><?php echo htmlspecialchars($role); ?></p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main class="container">
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hello! I am <?php echo htmlspecialchars($name); ?>,
+            an Information Technology student passionate about
+            technology, programming, and web development.
+            I enjoy learning new technologies, developing systems,
+            and solving computer-related problems.
+            My goal is to become a skilled IT professional and
+            contribute to innovative technology solutions.
+        </p>
+    </section>
+
+    <section id="education">
+        <h2>Educational Background</h2>
+        <div class="info">
+            <h3>Bachelor of Science in Information Technology</h3>
+            <p><strong>Field:</strong> Information Technology</p>
+            <p><strong>Level:</strong> College Student</p>
+            <p><strong>School:</strong> Your University Name</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills">
+            <?php foreach ($skills as $skill): ?>
+                <span class="skill">
+                    <?php echo htmlspecialchars($skill); ?>
+                </span>
+            <?php endforeach; ?>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Academic Projects</h2>
+
+        <?php foreach ($projects as $project): ?>
+            <div class="project">
+                <h3>
+                    <?php echo htmlspecialchars($project["title"]); ?>
+                </h3>
+                <p>
+                    <?php echo htmlspecialchars($project["description"]); ?>
+                </p>
+            </div>
+        <?php endforeach; ?>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <div class="info">
+            <p><strong>Name:</strong> <?php echo htmlspecialchars($name); ?></p>
+            <p><strong>Course:</strong> <?php echo htmlspecialchars($course); ?></p>
+            <p><strong>Email:</strong> yourname@gmail.com</p>
+            <p><strong>Location:</strong> Philippines</p>
+        </div>
+
+        <button class="btn" onclick="window.print()">
+            Print / Save CV as PDF
+        </button>
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        &copy; <?php echo date("Y"); ?>
+        <?php echo htmlspecialchars($name); ?>.
+        All Rights Reserved.
+    </p>
+</footer>
+
+</body>
+</html>
